@@ -1,8 +1,23 @@
 {
   "name": "approve-pr-action",
+  "private": true,
   "version": "0.0.1",
-  "main": "index.js",
-  "repository": "https://github.com/jgautsch/approve-pr-action",
-  "author": "Jon Gautsch",
-  "license": "MIT"
+  "license": "MIT",
+  "description": "GitHub Action for approving PRs",
+  "repository": "jgautsch/approve-pr-action",
+  "scripts": {
+    "test": "prettier-standard index.js && standard index.js",
+    "build": "ncc build index.js",
+    "version": "npm run build && git add dist",
+    "postversion": "git tag v1"
+  },
+  "dependencies": {
+    "@actions/core": "^1.2.5",
+    "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3",
+    "prettier-standard": "^16.4.1",
+    "standard": "^14.3.4"
+  }
 }
