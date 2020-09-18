@@ -1,0 +1,8 @@
+{
+  "name": "approve-pr-action",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/jgautsch/approve-pr-action",
+  "author": "Jon Gautsch",
+  "license": "MIT"
+}
